@@ -27,7 +27,14 @@ class Program
             bundler.GetAttrMessage("about", ("case", (FluentString)"locative")),
             bundler.GetAttrMessage("messages", ("case", (FluentString)"locative"), ("msgCount", (FluentNumber)4)), // podawanie kilku parametrów i kolejność nie ma znaczenia
             
-            bundler.GetAttrMessage("time-elapsed", ("duration", (FluentNumber)12345.678f)),
+            //bundler.GetAttrMessage("time-elapsed", ("duration", (FluentNumber)12345.678f)),
+            bundler.GetAttrMessage("apple", ("count", (FluentNumber)1)),
+            bundler.GetAttrMessage("apple", ("count", (FluentNumber)2)),
+            bundler.GetAttrMessage("apple", ("count", (FluentNumber)20)),
+            bundler.GetAttrMessage("apple-pie", ("count", (FluentNumber)1)),
+            bundler.GetAttrMessage("apple-pie", ("count", (FluentNumber)2)),
+            bundler.GetAttrMessage("apple-pie", ("count", (FluentNumber)20)),
+            
         };
 
         foreach (var phrase in phrases)

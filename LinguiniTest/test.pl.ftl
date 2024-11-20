@@ -5,6 +5,7 @@ tabs-close-tooltip = {$tabCount ->
     [one] Zamknij kartę
     [few] Zamknij {$tabCount} karty
     *[many] Zamknij { $tabCount } kart
+    [other] Zamknij { $tabCount } karty
 }
 tabs-close-warning = {$tabCount ->
     [few] Zostaną zamknięte {$tabCount} karty.
@@ -61,3 +62,42 @@ signedout-title = Zaloguj się do { -brand-name(case: "genitive") }
 about = Informacje o { -brand-name(case: $case) }.
 
 messages = {$msgCount} wiadomości o { -brand-name(case: $case) }.
+
+# time-elapsed = Time elapsed: { NUMBER($duration, maximumFractionDigits: 0) }s.
+
+
+-apple =
+    { $count ->
+        *[one] { $case ->
+            *[nominative] jabłko
+            [genitive] jabłka
+            [dative] jabłku
+            [accusative] jabłko
+            [instrumental] jabłkiem
+            [locative] jabłku
+            [voccative] jabłko
+        }
+        [few] { $case ->
+            *[nominative] {$count} jabłka
+            [genitive] {$count} jabłek
+            [dative] {$count} jabłkom
+            [accusative] {$count} jabłka
+            [instrumental] {$count} jabłkami
+            [locative] {$count} jabłkach
+            [voccative] {$count} jabłka
+            }
+        [many] { $case ->
+            *[nominative] {$count} jabłek
+            [genitive] {$count} jabłek
+            [dative] {$count} jabłkom
+            [accusative] {$count} jabłek
+            [instrumental] {$count} jabłkami
+            [locative] {$count} jabłkach
+            [voccative] {$count} jabłek
+        }
+    }
+
+
+apple = { -apple(count: $count, case: "nominative")  }
+apple-pie = Placek z { -apple(count: $count, case: "instrumental") }
+
